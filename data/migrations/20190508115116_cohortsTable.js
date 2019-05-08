@@ -6,7 +6,9 @@ exports.up = function(knex, Promise) {
     //new field
     tbl
       .string('name', 128) // creates field called 'name', that is a text field w/a 128 word count limit
-      .notNullable() // makes the field required
+     .notNullable() // makes the field required
+
+     tbl.timestamps(true, true);
 
   })
 };
